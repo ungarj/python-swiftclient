@@ -261,7 +261,9 @@ def get_conn(options):
                       insecure=options['insecure'],
                       cert=options['os_cert'],
                       cert_key=options['os_key'],
-                      ssl_compression=options['ssl_compression'])
+                      ssl_compression=options['ssl_compression'],
+                      timeout=options.get("timeout", 864000)
+                      )
 
 
 def mkdirs(path):
